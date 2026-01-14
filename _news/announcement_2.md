@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Jungil starts a research internship at NASA Ames Research Center](https://www.nasa.gov/intelligent-systems-division/autonomous-systems-and-robotics/intelligent-robotics-group/)
+[I started a research internship at NASA Ames Research Center](https://www.nasa.gov/intelligent-systems-division/autonomous-systems-and-robotics/intelligent-robotics-group/)
