@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Our paper, "San Francisco World: Leveraging Structural Regularities of Slope for 3-DoF Visual Compass," has been accepted for publication in IEEE Robotics and Automation Letters (RA-L), January 2025. I am the first author](https://SanFranciscoWorld.github.io)
+[Our paper, "San Francisco World: Leveraging Structural Regularities of Slope for 3-DoF Visual Compass," has been accepted by IEEE Robotics and Automation Letters (RA-L), January 2025](https://SanFranciscoWorld.github.io)
