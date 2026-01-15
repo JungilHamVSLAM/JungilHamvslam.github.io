@@ -20,26 +20,33 @@
     }
   ],
   "work": [
-    {
-      "institution": "NASA Ames Research Center",
-      "position": "Research Intern",
-      "startDate": "2024-10",
-      "endDate": "2025-03",
-      "description": "Conducted research on Manhattan World–based visual orientation estimation and Gaussian Splatting SLAM for space robotics applications."
-    },
-    {
-      "institution": "Sungkyunkwan University (SKKU)",
-      "position": "Research Intern",
-      "startDate": "2021-12",
-      "endDate": "2022-01",
-      "description": "Participated in short-term research internship focusing on robotics and computer vision."
-    },
-    {
-      "institution": "Korea Institute of Science and Technology (KIST)",
-      "position": "Undergraduate Research Assistant",
-      "startDate": "2021-03",
-      "endDate": "2021-11",
-      "description": "Worked as an undergraduate researcher on robotics-related research projects."
-    }
-  ]
+  {
+    "company": "NASA Ames Research Center",
+    "position": "Research Intern",
+    "startDate": "2024-10",
+    "endDate": "2025-03",
+    "highlights": [
+      "Conducted research on Manhattan World–based visual orientation estimation",
+      "Developed Gaussian Splatting SLAM methods for space robotics applications"
+    ]
+  },
+  {
+    "company": "Sungkyunkwan University (SKKU)",
+    "position": "Research Intern",
+    "startDate": "2021-12",
+    "endDate": "2022-01",
+    "highlights": [
+      "Participated in short-term research internship focusing on robotics and computer vision"
+    ]
+  },
+  {
+    "company": "Korea Institute of Science and Technology (KIST)",
+    "position": "Undergraduate Research Assistant",
+    "startDate": "2021-03",
+    "endDate": "2021-11",
+    "highlights": [
+      "Worked as an undergraduate researcher on robotics-related research projects"
+    ]
+  }
+]
 }
