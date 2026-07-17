@@ -2,12 +2,14 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Selected research projects.
 nav: false
 nav_order: 2
-display_categories: [work, fun]
+display_categories:
 horizontal: false
 ---
+
+Individual project pages are being prepared. In the meantime, please see my [publications](/publications/) for current research and code.
 
 <!-- pages/projects.md -->
 <div class="projects">
