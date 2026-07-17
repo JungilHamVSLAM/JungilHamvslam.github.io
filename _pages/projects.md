@@ -2,14 +2,12 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Selected research projects.
-nav: false
+description: Selected research projects on visual localization, SLAM, and space robotics.
+nav: true
 nav_order: 2
 display_categories:
 horizontal: false
 ---
-
-Individual project pages are being prepared. In the meantime, please see my [publications](/publications/) for current research and code.
 
 <!-- pages/projects.md -->
 <div class="projects">
