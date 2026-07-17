@@ -1,4 +1,11 @@
 {
+  "basics": {
+    "name": "Jungil Ham",
+    "label": "Ph.D. Candidate in Mechanical and Robotics Engineering, GIST",
+    "email": "jungilham@gm.gist.ac.kr",
+    "url": "https://jungilhamvslam.github.io",
+    "summary": "Ph.D. candidate at GIST researching visual localization, mapping, and orientation estimation for robots operating in complex environments, including space robotics, indoor aerial platforms, and structurally constrained scenes."
+  },
   "education": [
     {
       "institution": "Gwangju Institute of Science and Technology (GIST)",
@@ -20,33 +27,76 @@
     }
   ],
   "work": [
-  {
-    "company": "NASA Ames Research Center",
-    "position": "Research Intern",
-    "startDate": "2024-10",
-    "endDate": "2025-03",
-    "highlights": [
-      "Conducted research on Manhattan World–based visual orientation estimation",
-      "Developed Gaussian Splatting SLAM methods for space robotics applications"
-    ]
-  },
-  {
-    "company": "Sungkyunkwan University (SKKU)",
-    "position": "Research Intern",
-    "startDate": "2021-12",
-    "endDate": "2022-01",
-    "highlights": [
-      "Participated in short-term research internship focusing on robotics and computer vision"
-    ]
-  },
-  {
-    "company": "Korea Institute of Science and Technology (KIST)",
-    "position": "Undergraduate Research Assistant",
-    "startDate": "2021-03",
-    "endDate": "2021-11",
-    "highlights": [
-      "Worked as an undergraduate researcher on robotics-related research projects"
-    ]
-  }
-]
+    {
+      "company": "NASA Ames Research Center",
+      "position": "Research Intern",
+      "startDate": "2024-10",
+      "endDate": "2025-03",
+      "highlights": [
+        "Conducted research on Manhattan World–based visual orientation estimation",
+        "Developed Gaussian Splatting SLAM methods for space robotics applications"
+      ]
+    },
+    {
+      "company": "Sungkyunkwan University (SKKU)",
+      "position": "Research Intern",
+      "startDate": "2021-12",
+      "endDate": "2022-01",
+      "highlights": [
+        "Participated in short-term research internship focusing on robotics and computer vision"
+      ]
+    },
+    {
+      "company": "Korea Institute of Science and Technology (KIST)",
+      "position": "Undergraduate Research Assistant",
+      "startDate": "2021-03",
+      "endDate": "2021-11",
+      "highlights": [
+        "Worked as an undergraduate researcher on robotics-related research projects"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "GIST International Research Experience Fellowship",
+      "date": "2024",
+      "awarder": "Gwangju Institute of Science and Technology (GIST)",
+      "url": "https://me.gist.ac.kr/prog/bbsArticle/BBSMSTR_000000000334/B000000083361Xj3uX0i/view.do",
+      "summary": "Fellowship supporting an international research experience abroad."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Research",
+      "icon": "fas fa-flask",
+      "keywords": [
+        "Visual SLAM & Odometry",
+        "Visual Compass / 3-DoF Rotation Estimation",
+        "Structural Regularities (Manhattan / Atlanta / San Francisco World)",
+        "Space Robotics (Astrobee, ISS)",
+        "Gaussian Splatting SLAM"
+      ]
+    },
+    {
+      "name": "Programming",
+      "icon": "fas fa-code",
+      "keywords": [
+        "C++",
+        "Python",
+        "ROS",
+        "MATLAB"
+      ]
+    }
+  ],
+  "interests": [
+    {
+      "name": "Research Interests",
+      "icon": "fas fa-lightbulb",
+      "keywords": [
+        "Robot Perception & State Estimation",
+        "Space & Aerial Robotics",
+        "3D Computer Vision"
+      ]
+    }
+  ]
 }
