@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://jungilhamvslam.github.io/sitemap.xml
+Sitemap: https://jungilham.com/sitemap.xml
