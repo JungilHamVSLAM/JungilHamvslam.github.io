@@ -8,11 +8,17 @@
           <img data-zoomable class="preview z-depth-1 rounded" src="{{ entry.preview }}">
           {%- else -%}
             {%- assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' -%}
+            {%- comment -%}
+              Describe the paper, not the file: alt="srw2026.png" is useless to a screen reader.
+              escape is required -- figure.html interpolates this straight into alt="...", and
+              titles contain characters like the & in "Calibration & Estimation".
+            {%- endcomment -%}
+            {%- capture preview_alt -%}Figure from {{ entry.title | strip_html | escape }}{%- endcapture -%}
             {% include figure.html
             path=entry_path
             class="preview z-depth-1 rounded"
             zoomable=true
-            alt=entry.preview -%}
+            alt=preview_alt -%}
           {%- endif -%}
         {%- elsif entry.abbr -%}
           {%- if site.data.venues[entry.abbr] -%}

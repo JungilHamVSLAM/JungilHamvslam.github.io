@@ -66,6 +66,7 @@ max_width: 800px
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
 og_image: /assets/img/jungil_prof.jpg # The site-wide (default for all links) Open Graph preview image
+og_locale: en_US # Open Graph wants a full locale (en_US), not a bare language code
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -144,11 +145,13 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out
 # the information below.
+# Left blank on purpose: the theme's defaults pointed at alshedivat/al-folio, so any
+# comment posted here would have landed in the theme author's discussions.
 giscus:
-  repo: alshedivat/al-folio      # <your-github-user-name>/<your-github-repo-name>
-  repo_id: MDEwOlJlcG9zaXRvcnk2MDAyNDM2NQ==
+  repo:                          # <your-github-user-name>/<your-github-repo-name>
+  repo_id:
   category: Comments             # name of the category under which discussions will be created
-  category_id: DIC_kwDOA5PmLc4CTBt6
+  category_id:
   mapping: title                 # identify discussions by post title
   strict: 1                      # use strict identification mode
   reactions_enabled: 1           # enable (1) or disable (0) emoji reactions
@@ -158,7 +161,7 @@ giscus:
   lang: en
 
 # Disqus comments (DEPRECATED)
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # External sources.
@@ -305,8 +308,11 @@ scholar:
   group_order: descending
 
 badges: # Display different badges for your publications
-  altmetric_badge: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
-  dimensions_badge: true # Dimensions badge (https://badge.dimensions.ai/)
+  # Both badges key off a DOI. None of the entries in papers.bib carry one that the
+  # services index yet, so these only loaded four third-party scripts and rendered
+  # nothing. Flip back on once the DOIs have been picked up by Altmetric/Dimensions.
+  altmetric_badge: false # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+  dimensions_badge: false # Dimensions badge (https://badge.dimensions.ai/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric, award]
@@ -333,7 +339,12 @@ external_links:
 # -----------------------------------------------------------------------------
 
 imagemagick:
-  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  # Disabled: the GitHub Actions runner in .github/workflows/deploy.yml has no webp
+  # delegate, so the -480/-800/-1400.webp variants were never generated while the
+  # <source> tags still pointed at them -> every image 404'd and rendered broken.
+  # Source images in assets/img are now pre-sized instead. If you re-enable this,
+  # verify the variants actually exist in the deployed site before shipping.
+  enabled: false # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
     - 480
     - 800
@@ -361,10 +372,13 @@ jekyll-diagrams:
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:    true  # enables google analytics
+# These stay false until the matching ID above is filled in -- when enabled with a
+# blank ID the theme still emits <script src=".../gtag/js?id="> and empty
+# verification <meta> tags, which measure nothing and verify nothing.
+enable_google_analytics:    false  # enables google analytics
 enable_cronitor_analytics:  false  # enables cronitor RUM analytics
-enable_google_verification: true  # enables google site verification
-enable_bing_verification:   true  # enables bing site verification
+enable_google_verification: false  # enables google site verification
+enable_bing_verification:   false  # enables bing site verification
 enable_masonry:             true   # enables automatic project cards arrangement
 enable_math:                true   # enables math typesetting (uses MathJax)
 enable_tooltips:            false  # enables automatic tooltip links generated
