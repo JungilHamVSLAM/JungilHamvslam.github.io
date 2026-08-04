@@ -305,7 +305,13 @@ blockquote {
   text-align: center;
 
   .contact-icons {
-    font-size: 4rem;
+    // 4rem (64px) icons competed with the link row at the top of the About page
+    // for the same job. This set is the secondary one, so it reads as secondary.
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.1rem;
 
     a {
       i::before {
@@ -536,7 +542,7 @@ footer.sticky-bottom {
   }
 
   h2.category {
-    color: var(--global-divider-color);
+    color: var(--global-marker-color);
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0.5rem;
     margin-top: 2rem;
@@ -568,12 +574,12 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-  color: var(--global-divider-color);
-  border-top: 1px solid var(--global-divider-color);
-  padding-top: 1rem;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  text-align: right;
+    color: var(--global-marker-color);
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    text-align: right;
     line-height: 1;
   }
 

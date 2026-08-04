@@ -28,6 +28,13 @@ $grey-color-light:    lighten($grey-color, 40%);
 $grey-color-dark:     #1C1C1D;
 $grey-900:            #212529;
 
+// Section markers: the year above a publication group, a project category heading.
+// Recessive but legible -- roughly 5:1 against their own background, against the
+// 14-21:1 of body text. The theme reused --global-divider-color for these, which
+// renders at 1.1:1 in light mode and 1.7:1 in dark, i.e. effectively invisible.
+$marker-color-light:  #6F6F73;
+$marker-color-dark:   #8A8A90;
+
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
