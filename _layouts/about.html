@@ -23,10 +23,14 @@ layout: default
                 {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
               {% endif %}
 
+              {%- comment -%} Describe the person, not the file name. {%- endcomment -%}
+              {%- capture default_profile_alt -%}Portrait of {{ site.first_name }} {{ site.last_name }}{%- endcapture -%}
+              {%- assign profile_image_alt = page.profile.image_alt | default: default_profile_alt -%}
+
               {% include figure.html
               path=profile_image_path
               class=profile_image_class
-              alt=page.profile.image
+              alt=profile_image_alt
               cache_bust=true -%}
             {% endif -%}
             {%- if page.profile.address %}
@@ -55,15 +59,17 @@ layout: default
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Publications</a></h2>
+            {%- comment -%}
+              Says "Selected" because it is: only entries with selected={true} in
+              papers.bib appear here. Titling it "Publications" while showing a subset
+              made the full list at /publications/ look like a duplicate page.
+            {%- endcomment -%}
+            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">Selected Publications</a></h2>
             {%- include selected_papers.html %}
+            <p class="all-publications-link">
+              <a href="{{ '/publications/' | relative_url }}">See all publications &rarr;</a>
+            </p>
           {%- endif %}
-
-          <!-- Viewer Map-->
-          <h2><a href="#" style="color: inherit;">Viewer Map</a></h2>
-          <hr>
-          <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=lWoAWy0cj1ucRuH-t-uem8T2KNJHfpfwqz4vUTJkSW4&cl=ffffff&w=a"></script>
-          <hr>
 
           <!-- Social -->
           {%- if page.social %}

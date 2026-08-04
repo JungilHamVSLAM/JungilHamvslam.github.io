@@ -18,15 +18,26 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 <style>
+/* Everything here reads from the theme's CSS variables so it follows light/dark.
+   The previous version hardcoded #fff and #9a9a9a, which put a bright white slab
+   behind the logos in dark mode, and white-on-brand-colour badge text that sat at
+   3.6:1 contrast. The badges now match the PDF/Code buttons on the publications
+   page, so the whole site uses one button style. */
 .intro-badges{display:flex;flex-wrap:wrap;gap:8px;margin:.4rem 0 1.3rem;}
-.lnk-badge{display:inline-flex;align-items:center;gap:6px;color:#fff!important;font-size:13px;font-weight:500;padding:5px 12px;border-radius:6px;text-decoration:none;transition:opacity .2s;}
-.lnk-badge:hover{opacity:.85;}
+.lnk-badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:400;
+  padding:.25rem 1rem;border-radius:.125rem;text-decoration:none;white-space:nowrap;
+  color:var(--global-text-color);border:1px solid var(--global-text-color);
+  transition:color .2s ease-in-out,border-color .2s ease-in-out;}
+.lnk-badge:hover{color:var(--global-theme-color);border-color:var(--global-theme-color);text-decoration:none;}
 .lnk-badge i{font-size:14px;line-height:1;}
 .affil-wrap{margin:.2rem 0 1.5rem;}
-.affil-label{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:#9a9a9a;margin-bottom:8px;}
-.affil-chip{display:inline-flex;align-items:center;gap:24px;background:#fff;border-radius:10px;padding:10px 20px;}
-.affil-chip img{height:42px;width:auto;filter:grayscale(100%);opacity:.72;transition:all .25s;}
-.affil-chip img:hover{filter:none;opacity:1;}
+.affil-label{font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--global-marker-color);margin-bottom:8px;}
+.affil-chip{display:inline-flex;align-items:center;gap:24px;padding:4px 0;}
+.affil-chip img{height:42px;width:auto;filter:grayscale(100%);opacity:.72;transition:opacity .25s ease-in-out;}
+.affil-chip img:hover{opacity:1;}
+/* gist.png is an alpha silhouette, so inverting it in dark mode lightens the marks
+   without dragging a white background square along with them. */
+html[data-theme='dark'] .affil-chip img{filter:grayscale(100%) invert(1);}
 </style>
 
 <p style="font-size:1.12rem;line-height:1.6;margin-bottom:.3rem;">I work on <strong>spatial AI for robots</strong> — robust visual localization, mapping, and state estimation grounded in the geometry of the world — from the <strong>International Space Station</strong> to aerial and field robots.</p>
@@ -43,7 +54,7 @@ social: true  # includes social icons at the bottom of the page
 <div class="affil-wrap">
 <div class="affil-label">Affiliations &amp; Collaborations</div>
 <div class="affil-chip">
-<img src="/assets/img/gist.jpg" alt="GIST">
+<img src="/assets/img/gist.png" alt="Gwangju Institute of Science and Technology">
 <img src="/assets/img/nasa.svg" alt="NASA">
 </div>
 </div>

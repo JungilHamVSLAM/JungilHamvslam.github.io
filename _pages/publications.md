@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Publications by categories in reversed chronological order.
+description: Peer-reviewed publications in reverse chronological order.
 nav: true
 nav_order: 1
 ---
@@ -10,5 +10,4 @@ nav_order: 1
 <div class="publications">
 
 {% bibliography -f {{ site.scholar.bibliography }} %}
-* Equal Contribution
 </div>

@@ -3,8 +3,7 @@ layout: cv
 permalink: /cv/
 title: CV
 nav: true
-nav_order: 4
-cv_pdf: Jungil_Resume.pdf
-description: 
-# description: This is a description of the page. You can modify it in 'pages/_cv.md'. You can also change or remove the top pdf download button.
+nav_order: 3
+cv_pdf: Jungil_Ham_CV.pdf
+description: Curriculum vitae of Jungil Ham — education, research experience, awards, and skills.
 ---

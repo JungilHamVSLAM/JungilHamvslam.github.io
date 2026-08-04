@@ -13,13 +13,17 @@
     <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
 {%- endif %}
 
+    {%- comment -%} Collapse the double space left behind when middle_name is empty. {%- endcomment -%}
+    {%- capture full_name -%}{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}{%- endcapture -%}
+    {%- assign full_name = full_name | replace: '  ', ' ' | strip -%}
+
     <!-- Standard metadata -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>
     {%- if site.title == "blank" -%}
-        {%- capture title -%}{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}{%- endcapture -%}
+        {%- capture title -%}{{ full_name }}{%- endcapture -%}
     {%- else -%}
         {%- capture title -%}{{ site.title }}{%- endcapture -%}
     {%- endif -%}
@@ -35,7 +39,7 @@
         {{ title }}
     {%- endif -%}
     </title>
-    <meta name="author" content="{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}" />
+    <meta name="author" content="{{ full_name }}" />
     <meta name="description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
 {%- if page.keywords or site.keywords %}
     <meta name="keywords" content="{%- if page.keywords -%}{{ page.keywords }}{%- else -%}{{ site.keywords }}{%- endif -%}" />
@@ -48,6 +52,15 @@
     {%- endunless -%}
 {%- endif -%}
 
+{%- comment -%}
+    Social crawlers (LinkedIn, Slack, X, Facebook) require an absolute og:image URL;
+    a site-root-relative path is silently dropped and the preview renders without an image.
+{%- endcomment -%}
+{%- assign og_image = page.og_image | default: site.og_image -%}
+{%- unless og_image contains '://' -%}
+    {%- assign og_image = og_image | absolute_url -%}
+{%- endunless -%}
+
 {%- if site.serve_og_meta %}
     <!-- OpenGraph -->
     <meta property="og:site_name" content="{{ title }}" />
@@ -55,17 +68,17 @@
     <meta property="og:title" content="{%- if page.title -%}{{ title }} | {{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
     <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}" />
     <meta property="og:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
-    {% if page.og_image or site.og_image -%}
-    <meta property="og:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
+    {% if og_image != blank -%}
+    <meta property="og:image" content="{{ og_image }}" />
     {%- endif %}
-    <meta property="og:locale" content="{{ site.lang }}" />
+    <meta property="og:locale" content="{{ site.og_locale | default: site.lang }}" />
 
     <!-- Twitter card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{%- if page.title -%}{{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{%- if page.title -%}{{ title }} | {{ page.title }}{%- else -%}{{ title }}{%- endif -%}" />
     <meta name="twitter:description" content="{%- if page.description -%}{{ page.description }}{%- else -%}{{ site.description }}{%- endif -%}" />
-    {% if page.og_image or site.og_image -%}
-    <meta name="twitter:image" content="{%- if page.og_image -%}{{ page.og_image }}{%- else -%}{{ site.og_image }}{%- endif -%}" />
+    {% if og_image != blank -%}
+    <meta name="twitter:image" content="{{ og_image }}" />
     {%- endif %}
     {% if site.twitter_username -%}
     <meta name="twitter:site" content="@{{ site.twitter_username }}" />
@@ -223,7 +236,7 @@
         "author":
         {
             "@type": "Person",
-            "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}"
+            "name": "{{ full_name }}"
         },
         "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
         "@type": "{%- if is_blog_post -%}BlogPosting{%- else -%}WebSite{%- endif -%}",
@@ -232,7 +245,7 @@
         {% if sameaslinks != blank -%}
         "sameAs": {{ sameaslinks }},
         {%- endif %}
-        "name": "{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}",
+        "name": "{{ full_name }}",
         "@context": "https://schema.org"
     }
     </script>
