@@ -46,7 +46,7 @@ html[data-theme='dark'] .affil-chip img{filter:grayscale(100%) invert(1);}
 <a class="lnk-badge" style="background:#4b5563" href="/cv/"><i class="fas fa-file-pdf"></i>CV</a>
 <a class="lnk-badge" style="background:#4285F4" href="https://scholar.google.com/citations?user=-cCSLacAAAAJ"><i class="ai ai-google-scholar"></i>Google Scholar</a>
 <a class="lnk-badge" style="background:#24292e" href="https://github.com/jungilha"><i class="fab fa-github"></i>GitHub</a>
-<a class="lnk-badge" style="background:#0A66C2" href="https://www.linkedin.com/in/jungil-ham"><i class="fab fa-linkedin"></i>LinkedIn</a>
+<a class="lnk-badge" style="background:#0A66C2" href="https://www.linkedin.com/in/jungil-ham-134766309"><i class="fab fa-linkedin"></i>LinkedIn</a>
 <a class="lnk-badge" style="background:#0b5394" href="https://dblp.org/pid/393/9998.html"><i class="ai ai-dblp"></i>DBLP</a>
 <a class="lnk-badge" style="background:#ea4335" href="mailto:jungilham@gm.gist.ac.kr"><i class="fas fa-envelope"></i>Email</a>
 </div>
