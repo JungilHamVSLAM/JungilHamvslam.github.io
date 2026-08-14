@@ -76,7 +76,7 @@ github_username: jungilha
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
-linkedin_username: jungil-ham
+linkedin_username: jungil-ham-134766309
 telegram_username: # your Telegram user name
 scholar_userid: -cCSLacAAAAJ
 semanticscholar_id: # your Semantic Scholar ID
@@ -187,7 +187,7 @@ collections:
 
 announcements:
   enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:

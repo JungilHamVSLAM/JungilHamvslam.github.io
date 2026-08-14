@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Our paper, "SPLiCE: Single-Point LiDAR and Camera Calibration & Estimation Leveraging Manhattan World," was presented at IEEE/RSJ IROS 2025](https://splice-calib.github.io/)
+[SPLiCE](https://splice-calib.github.io/) single-point LiDAR–camera calibration presented at IROS 2025

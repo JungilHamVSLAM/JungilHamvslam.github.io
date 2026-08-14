@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Our paper, "What Breaks Monocular SLAM in Microgravity? An Initial Benchmark on Rotation-Dominant Astrobee ISS Sequences," was presented at the ICRA 2026 Space Robotics Workshop](https://openreview.net/forum?id=OujDdCpd70)
+[Astrobee microgravity SLAM benchmark](https://openreview.net/forum?id=OujDdCpd70) presented at the ICRA 2026 Space Robotics Workshop

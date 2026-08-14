@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[I started a research internship at NASA Ames Research Center](https://www.nasa.gov/intelligent-systems-division/autonomous-systems-and-robotics/intelligent-robotics-group/)
+Research internship at the [NASA Ames Intelligent Robotics Group](https://www.nasa.gov/intelligent-systems-division/autonomous-systems-and-robotics/intelligent-robotics-group/)
