@@ -3,7 +3,8 @@ layout: page
 title: Projects
 permalink: /projects/
 description: Selected research projects on visual localization, SLAM, and space robotics.
-nav: true
+nav: false
+sitemap: false
 nav_order: 2
 display_categories:
 horizontal: false
