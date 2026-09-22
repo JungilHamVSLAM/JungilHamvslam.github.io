@@ -29,6 +29,7 @@ social: true  # includes social icons at the bottom of the page
   color:#fff;border:1px solid transparent;transition:opacity .2s ease-in-out;}
 .lnk-badge:hover{color:#fff;opacity:.85;text-decoration:none;}
 .lnk-badge i{font-size:14px;line-height:1;}
+.news table th{white-space:nowrap;}
 .affil-wrap{margin:.2rem 0 1.5rem;}
 .affil-chip{display:inline-flex;align-items:center;gap:24px;padding:4px 0;}
 .affil-chip img{height:42px;width:auto;filter:grayscale(100%);opacity:.72;transition:opacity .25s ease-in-out;}
