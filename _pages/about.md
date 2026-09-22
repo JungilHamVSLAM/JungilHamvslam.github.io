@@ -26,9 +26,8 @@ social: true  # includes social icons at the bottom of the page
 .intro-badges{display:flex;flex-wrap:wrap;gap:8px;margin:.4rem 0 1.3rem;}
 .lnk-badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:400;
   padding:.25rem 1rem;border-radius:.125rem;text-decoration:none;white-space:nowrap;
-  color:var(--global-text-color);border:1px solid var(--global-text-color);
-  transition:color .2s ease-in-out,border-color .2s ease-in-out;}
-.lnk-badge:hover{color:var(--global-theme-color);border-color:var(--global-theme-color);text-decoration:none;}
+  color:#fff;border:1px solid transparent;transition:opacity .2s ease-in-out;}
+.lnk-badge:hover{color:#fff;opacity:.85;text-decoration:none;}
 .lnk-badge i{font-size:14px;line-height:1;}
 .affil-wrap{margin:.2rem 0 1.5rem;}
 .affil-chip{display:inline-flex;align-items:center;gap:24px;padding:4px 0;}
@@ -43,11 +42,9 @@ html[data-theme='dark'] .affil-chip img{filter:grayscale(100%) invert(1);}
 
 <div class="intro-badges">
 <a class="lnk-badge" style="background:#4b5563" href="/cv/"><i class="fas fa-file-pdf"></i>CV</a>
-<a class="lnk-badge" style="background:#4285F4" href="https://scholar.google.com/citations?user=-cCSLacAAAAJ"><i class="ai ai-google-scholar"></i>Google Scholar</a>
+<a class="lnk-badge" style="background:#1a73e8" href="https://scholar.google.com/citations?user=-cCSLacAAAAJ"><i class="ai ai-google-scholar"></i>Google Scholar</a>
 <a class="lnk-badge" style="background:#24292e" href="https://github.com/jungilha"><i class="fab fa-github"></i>GitHub</a>
 <a class="lnk-badge" style="background:#0A66C2" href="https://www.linkedin.com/in/jungil-ham-134766309"><i class="fab fa-linkedin"></i>LinkedIn</a>
-<a class="lnk-badge" style="background:#0b5394" href="https://dblp.org/pid/393/9998.html"><i class="ai ai-dblp"></i>DBLP</a>
-<a class="lnk-badge" style="background:#ea4335" href="mailto:jungilham@gm.gist.ac.kr"><i class="fas fa-envelope"></i>Email</a>
 </div>
 
 <div class="affil-wrap">
