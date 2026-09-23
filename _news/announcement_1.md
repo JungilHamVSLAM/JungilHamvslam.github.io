@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[GIST International Research Experience Fellowship](https://me.gist.ac.kr/prog/bbsArticle/BBSMSTR_000000000334/B000000083361Xj3uX0i/view.do) awarded for the NASA Ames research internship
+I received the [GIST International Research Experience Fellowship](https://me.gist.ac.kr/prog/bbsArticle/BBSMSTR_000000000334/B000000083361Xj3uX0i/view.do), which funded the internship at NASA Ames

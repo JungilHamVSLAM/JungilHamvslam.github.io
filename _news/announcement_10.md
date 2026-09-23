@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Selected as a [Yuilhan Scholar](https://www.yuhanfoundation.or.kr/) by the Yuhan Foundation
+I was selected as a [Yuilhan Scholar](https://www.yuhanfoundation.or.kr/) by the Yuhan Foundation
