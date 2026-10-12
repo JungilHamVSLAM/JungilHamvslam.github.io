@@ -39,7 +39,7 @@ social: true  # includes social icons at the bottom of the page
 html[data-theme='dark'] .affil-chip img{filter:grayscale(100%) invert(1);}
 </style>
 
-<p style="font-size:1.12rem;line-height:1.6;margin-bottom:.3rem;">I work on <strong>spatial AI for robots</strong> — robust visual localization and SLAM — from the <strong>International Space Station</strong> to aerial and field robots.</p>
+<p style="font-size:1.12rem;line-height:1.6;margin-bottom:.3rem;">I develop <strong>robust visual localization and SLAM</strong> for robots, from complex environments on Earth to the <strong>International Space Station</strong>.</p>
 
 <div class="intro-badges">
 <a class="lnk-badge" style="background:#4b5563" href="/cv/"><i class="fas fa-file-pdf"></i>CV</a>
