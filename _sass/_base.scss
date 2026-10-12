@@ -555,10 +555,18 @@ footer.sticky-bottom {
 // Sends the reader from the selected subset on the About page to the full list.
 
 .all-publications-link {
-  margin-top: 0.75rem;
-  margin-bottom: 2rem;
+  margin: 0 0 0.75rem;
   font-size: 0.9rem;
+  line-height: 1.4;
   text-align: right;
+}
+
+.all-publications-link + .publications {
+  margin-top: 0.75rem;
+
+  h2.bibliography:first-child {
+    margin-top: 0;
+  }
 }
 
 
