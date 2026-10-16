@@ -632,6 +632,7 @@ footer.sticky-bottom {
       .row > .col-sm-8,
       .row > .col-sm-10 {
         flex: 1 1 0;
+        min-width: 0;
         max-width: none;
       }
 
